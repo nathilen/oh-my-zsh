@@ -57,3 +57,6 @@ export PATH=$PATH:/usr/local/bin/tree
 #fi
 source /usr/local/etc/bash_completion.d/cdargs-bash.sh
 source $HOME/shell_stuff/utils.sh
+
+# ALIASES
+alias git=hub
