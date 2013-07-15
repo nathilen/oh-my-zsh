@@ -32,13 +32,16 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+DISABLE_CORRECTION="true"
+
+plugins=(git ruby rails)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # PATH
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Charlet/.rvm/bin:/Users/Charlet/.rvm/bin
+export PATH=$PATH:/usr/local/sbin
 export GOROOT=$HOME/go
 export GOOS=darwin
 export GOARCH=386
@@ -59,4 +62,7 @@ source /usr/local/etc/bash_completion.d/cdargs-bash.sh
 source $HOME/shell_stuff/utils.sh
 
 # ALIASES
-alias git=hub
+#alias git=hub
+alias subl="open -a 'Sublime Text 2'"
+alias irconnect="ssh -p 781 charlet@tw-irc.ohthree.com"
+alias vim-bundle="ruby /usr/local/bin/vim-bundle"
