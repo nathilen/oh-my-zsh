@@ -40,7 +40,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # PATH
-export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Charlet/.rvm/bin:/Users/Charlet/.rvm/bin
+#export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Charlet/.rvm/bin:/Users/Charlet/.rvm/bin
+export PATH=$PATH:/Users/Charlet/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/Charlet/.rvm/bin:/Users/Charlet/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/sbin:/Users/Charlet/Documents/Libs/gradle-1.2/bin:/usr/bin/vagrant:/opt/local/bin:/usr/local/bin/tree
 export PATH=$PATH:/usr/local/sbin
 export GOROOT=$HOME/go
 export GOOS=darwin
@@ -53,6 +54,7 @@ export PATH=$PATH:/usr/bin/vagrant
 export PATH=$PATH:/opt/local/bin
 export PATH=$PATH:/Users/Charlet/.rvm/gems/ruby-1.9.3-p392/bin:/Users/Charlet/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/Charlet/.rvm/rubies/ruby-1.9.3-p392/bin
 export PATH=$PATH:/usr/local/bin/tree
+export GIT_SEQUENCE_EDITOR=/usr/local/bin/vim
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 #if [ -f `brew --prefix`/etc/bash_completion ]; then
@@ -62,7 +64,9 @@ source /usr/local/etc/bash_completion.d/cdargs-bash.sh
 source $HOME/shell_stuff/utils.sh
 
 # ALIASES
-#alias git=hub
+alias git=hub
+alias which="/usr/bin/which"
+alias vi="vim"
 alias subl="open -a 'Sublime Text 2'"
-alias irconnect="ssh -p 781 charlet@tw-irc.ohthree.com"
 alias vim-bundle="ruby /usr/local/bin/vim-bundle"
+alias stmysql="/usr/local/bin/mysqld &"
