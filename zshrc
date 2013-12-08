@@ -37,23 +37,20 @@ DISABLE_CORRECTION="true"
 plugins=(git ruby rails)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.bashrc
 
 # Customize to your needs...
+export GOBIN=$HOME/bin
+export GRADLE=$HOME/Documents/Libs/gradle-1.2/bin
+
 # PATH
-#export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Charlet/.rvm/bin:/Users/Charlet/.rvm/bin
-export PATH=$PATH:/Users/Charlet/.rvm/rubies/ruby-2.0.0-p195/bin:/Users/Charlet/.rvm/bin:/Users/Charlet/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/usr/local/sbin:/Users/Charlet/Documents/Libs/gradle-1.2/bin:/usr/bin/vagrant:/opt/local/bin:/usr/local/bin/tree
-export PATH=$PATH:/usr/local/sbin
+export PATH=$PATH:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin
+export PATH=$PATH:/usr/local/sbin:$HOME/.rvm/bin
+export PATH=$PATH:$GOBIN:$GRADLE
+
 export GOROOT=$HOME/go
 export GOOS=darwin
 export GOARCH=386
-export GOBIN=$HOME/bin
-export PATH=$GOBIN:$PATH
-export GRADLE=$HOME/Documents/Libs/gradle-1.2/bin
-export PATH=$PATH:$GRADLE
-export PATH=$PATH:/usr/bin/vagrant
-export PATH=$PATH:/opt/local/bin
-export PATH=$PATH:/Users/Charlet/.rvm/gems/ruby-1.9.3-p392/bin:/Users/Charlet/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/Charlet/.rvm/rubies/ruby-1.9.3-p392/bin
-export PATH=$PATH:/usr/local/bin/tree
 export GIT_SEQUENCE_EDITOR=/usr/local/bin/vim
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
