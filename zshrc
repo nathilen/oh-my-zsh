@@ -44,8 +44,8 @@ export GOBIN=$HOME/bin
 export GRADLE=$HOME/Documents/Libs/gradle-1.2/bin
 
 # PATH
-export PATH=$PATH:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin
-export PATH=$PATH:/usr/local/sbin:$HOME/.rvm/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin
+export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:$GOBIN:$GRADLE
 
 export GOROOT=$HOME/go
@@ -53,10 +53,6 @@ export GOOS=darwin
 export GOARCH=386
 export GIT_SEQUENCE_EDITOR=/usr/local/bin/vim
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-#if [ -f `brew --prefix`/etc/bash_completion ]; then
-#    . `brew --prefix`/etc/bash_completion
-#fi
 source /usr/local/etc/bash_completion.d/cdargs-bash.sh
 source $HOME/shell_stuff/utils.sh
 
@@ -64,6 +60,6 @@ source $HOME/shell_stuff/utils.sh
 alias git=hub
 alias which="/usr/bin/which"
 alias vi="vim"
-alias subl="open -a 'Sublime Text 2'"
 alias vim-bundle="ruby /usr/local/bin/vim-bundle"
 alias stmysql="/usr/local/bin/mysqld &"
+
