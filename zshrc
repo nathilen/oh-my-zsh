@@ -42,11 +42,12 @@ source ~/.bashrc
 # Customize to your needs...
 export GOBIN=$HOME/bin
 export GRADLE=$HOME/Documents/Libs/gradle-1.2/bin
+export M2_HOME=/usr/local/share/apache-maven-3.2.1
 
 # PATH
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin
 export PATH=$PATH:/usr/local/sbin
-export PATH=$PATH:$GOBIN:$GRADLE
+export PATH=$PATH:$GOBIN:$GRADLE:$M2_HOME
 
 export GOROOT=$HOME/go
 export GOOS=darwin
@@ -58,8 +59,10 @@ source $HOME/shell_stuff/utils.sh
 
 # ALIASES
 alias git=hub
+alias gcf="git cat-file"
 alias which="/usr/bin/which"
 alias vi="vim"
 alias vim-bundle="ruby /usr/local/bin/vim-bundle"
-alias stmysql="/usr/local/bin/mysqld &"
+alias startmysql="/usr/local/bin/mysqld &"
 
+# GET ssh key password
