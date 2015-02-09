@@ -40,6 +40,7 @@ source $ZSH/oh-my-zsh.sh
 source ~/.bashrc
 
 # Customize to your needs...
+
 export GOBIN=$HOME/bin
 export GRADLE=$HOME/Documents/Libs/gradle-1.2/bin
 export M2_HOME=/usr/local/share/apache-maven-3.2.1
@@ -55,6 +56,7 @@ export GOARCH=386
 export GIT_SEQUENCE_EDITOR=/usr/local/bin/vim
 
 source /usr/local/etc/bash_completion.d/cdargs-bash.sh
+# Load my custom functions
 source $HOME/shell_stuff/utils.sh
 
 # ALIASES
@@ -65,4 +67,5 @@ alias vi="vim"
 alias vim-bundle="ruby /usr/local/bin/vim-bundle"
 alias startmysql="/usr/local/bin/mysqld &"
 
-# GET ssh key password
+# Setting the local character encoding on iTerm
+export LC_CTYPE=en_US.UTF-8
