@@ -43,12 +43,15 @@ source ~/.bashrc
 
 export GOBIN=$HOME/bin
 export GRADLE=$HOME/Documents/Libs/gradle-1.2/bin
-export M2_HOME=/usr/local/share/apache-maven-3.2.1
+#export M2_HOME=/usr/local/share/apache-maven-3.2.1
+export M3_HOME=/usr/local/Cellar/maven/3.1.1
 
 # PATH
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/opt/local/bin
 export PATH=$PATH:/usr/local/sbin
 export PATH=$PATH:$GOBIN:$GRADLE:$M2_HOME
+# This line is needed for git svn to functional properly. Putting Git provided by development tools ahead in my PATH variable
+export PATH="/Applications/XXXXX.app/Contents/Developer/usr/libexec/git-core":/Library/Developer/CommandLineTools/usr/bin:$PATH
 
 export GOROOT=$HOME/go
 export GOOS=darwin
@@ -69,3 +72,17 @@ alias startmysql="/usr/local/bin/mysqld &"
 
 # Setting the local character encoding on iTerm
 export LC_CTYPE=en_US.UTF-8
+
+# Increase memory assigned to Maven to handle more memory consuming apps
+export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:MaxPermSize=512m -XX:PermSize=512m -Dcom.sun.management.jmxremote"
+
+# Setting Java home path
+#export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=`/usr/libexec/java_home -v 1.7.0_80`
+
+# Temp aliases
+source $HOME/shell_stuff/aliases.sh
+
+#JBOSSS 
+export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
+export PATH=${PATH}:${JBOSS_HOME}/bin
