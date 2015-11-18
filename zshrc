@@ -58,17 +58,13 @@ export GOOS=darwin
 export GOARCH=386
 export GIT_SEQUENCE_EDITOR=/usr/local/bin/vim
 
+#SONAR
+export SONAR_RUNNER_HOME=/Users/Charlet/Documents/Learning/sonar/sonar-runner-2.4
+export PATH=$PATH:$SONAR_RUNNER_HOME/bin
+
 source /usr/local/etc/bash_completion.d/cdargs-bash.sh
 # Load my custom functions
 source $HOME/shell_stuff/utils.sh
-
-# ALIASES
-alias git=hub
-alias gcf="git cat-file"
-alias which="/usr/bin/which"
-alias vi="vim"
-alias vim-bundle="ruby /usr/local/bin/vim-bundle"
-alias startmysql="/usr/local/bin/mysqld &"
 
 # Setting the local character encoding on iTerm
 export LC_CTYPE=en_US.UTF-8
@@ -83,6 +79,6 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.7.0_80`
 # Temp aliases
 source $HOME/shell_stuff/aliases.sh
 
-#JBOSSS 
+#JBOSS 
 export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
 export PATH=${PATH}:${JBOSS_HOME}/bin
