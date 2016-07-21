@@ -52,6 +52,7 @@ export PATH=$PATH:$GOBIN:$GRADLE:$M2_HOME
 # This line is needed for git svn to functional properly. Putting Git provided by development tools ahead in my PATH variable
 export PATH="/Applications/XXXXX.app/Contents/Developer/usr/libexec/git-core":/Library/Developer/CommandLineTools/usr/bin:$PATH
 export PATH=`echo $PATH | sed -e 's/:\/opt\/local\/bin//g'`
+export PATH=/opt/chefdk/bin:$PATH
 
 export GOROOT=$HOME/go
 export GOOS=darwin
@@ -75,6 +76,9 @@ export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:MaxPermSize=512m -XX:PermSize=512m -Dc
 # Setting Java home path
 #export JAVA_HOME=$(/usr/libexec/java_home)
 export JAVA_HOME=`/usr/libexec/java_home -v 1.7.0_80`
+#export JAVA_HOME=`/usr/libexec/java_home -v 9-ea`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_45`
+#/Library/Java/JavaVirtualMachines/jdk1.8.0_45.jdk/Contents/Home
 
 # Temp aliases
 source $HOME/shell_stuff/aliases.sh
@@ -83,3 +87,11 @@ source $HOME/shell_stuff/aliases.sh
 export JBOSS_HOME=/usr/local/opt/wildfly-as/libexec
 export PATH=${PATH}:${JBOSS_HOME}/bin
 export SSL_CERT_FILE=/usr/local/etc/openssl/ca-cert.pem
+
+#nvm
+export NVM_DIR="$HOME/.nvm"
+  . "$(brew --prefix nvm)/nvm.sh"
+
+#export node to sudo user
+#n=$(which node);n=${n%/bin/node}; chmod -R 755 $n/bin/*; sudo cp -r $n/{bin,lib,share} /usr/local
+[[ -s "$HOME/.avn/bin/avn.sh" ]] && source "$HOME/.avn/bin/avn.sh" # load avn
